@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="D.R AQUATIC melayani pembuatan aquascape, aquarium custom, paludarium, terrarium, reef tank, kolam, dan maintenance.">
+  <meta name="theme-color" content="#102b3a">
+  <title>D.R AQUATIC | Creating Nature Inside Your Space</title>
+  <link rel="icon" type="image/png"
+href="/Asset/Public/Hero/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#102b3a; --navy-2:#173e4a; --green:#66b84a; --green-dark:#438d30;
+      --paper:#f6f8f5; --white:#fff; --ink:#1c2b32; --muted:#66777c;
+      --line:#e5ebe7; --shadow:0 18px 50px rgba(16,43,58,.09);
+      --radius:18px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green-dark);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .eyebrow:before{content:"";width:24px;height:2px;background:var(--green)}
+    .section{padding:88px 0}
+    .section-heading{max-width:700px;margin:0 auto 42px;text-align:center}
+    .section-heading .eyebrow:before{display:none}
+    .section-heading h2{font:800 clamp(28px,4vw,40px)/1.15 "Manrope",sans-serif;letter-spacing:-1.3px;margin:12px 0}
+    .section-heading p{margin:0;color:var(--muted);font-size:15px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:8px;background:var(--green);color:#fff;font-size:13px;font-weight:800;transition:.2s}
+    .btn:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff}
+    .btn-outline:hover{background:#fff;color:var(--navy)}
+    /* Header */
+    .site-header{height:82px;position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,43,58,.07)}
+    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+    .brand img{width:46px;height:46px;object-fit:contain}
+    .brand-name{font:800 18px "Manrope",sans-serif;letter-spacing:-.5px;color:var(--navy)}
+    .brand-name span{display:block;color:var(--green-dark);font:700 9px "DM Sans",sans-serif;letter-spacing:2px;margin-top:-2px}
+    .nav-links{display:flex;align-items:center;gap:25px;margin-left:auto}
+    .nav-links>a,.blog-toggle{font-size:12px;font-weight:700;color:#42545a;transition:.2s}
+    .nav-links>a:hover,.blog-toggle:hover{color:var(--green-dark)}
+    .blog-menu{position:relative}
+    .blog-toggle{border:0;background:none;padding:12px 0;cursor:pointer;display:flex;align-items:center;gap:6px}
+    .chevron{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+    .dropdown{position:absolute;top:calc(100% + 12px);left:-20px;width:255px;padding:9px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+    .blog-menu:hover .dropdown,.blog-menu:focus-within .dropdown,.blog-menu.open .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown a{display:block;padding:11px 12px;border-radius:7px;font-size:12px;font-weight:600;color:#46585e}
+    .dropdown a:hover{background:#f1f7ef;color:var(--green-dark)}
+    .nav-cta{white-space:nowrap}
+    .menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--navy);cursor:pointer}
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(112deg,#102b3a 0%,#173f4a 60%,#22554c 100%);color:#fff}
+    .hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid #ffffff12;border-radius:50%;right:-150px;top:-220px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05;pointer-events:none}
+    .hero-grid{position:relative;z-index:1;min-height:570px;display:grid;grid-template-columns:1.02fr .98fr;gap:65px;align-items:center;padding:70px 0}
+    .hero .eyebrow{color:#a8dc91}
+    .hero h1{font:800 clamp(40px,5.3vw,65px)/1.07 "Manrope",sans-serif;letter-spacing:-2.7px;margin:18px 0 22px;max-width:620px}
+    .hero h1 em{font-style:normal;color:#8bd36b}
+    .hero-copy>p{max-width:535px;color:#d3e0df;font-size:15px;margin:0 0 29px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .photo-slot{position:relative;overflow:hidden;background:linear-gradient(135deg,#a7c3a2,#527b71 52%,#1e414d);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+    .photo-slot:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#061b2b70,transparent 65%);z-index:1;pointer-events:none}
+    .photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+    .photo-slot img[src=""]{display:none}
+    .photo-slot .hint{position:relative;z-index:1;padding:15px;font-size:11px;font-weight:700;letter-spacing:.5px;text-shadow:0 1px 4px #0008}
+    .hero-photo{height:365px;border:1px solid #ffffff30;box-shadow:0 25px 65px #071c2a55}
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+    .overview-photo{height:410px}
+    .about-copy h2{font:800 36px/1.15 "Manrope",sans-serif;letter-spacing:-1.2px;margin:14px 0 18px}
+    .about-copy p{font-size:14px;color:var(--muted);margin:0 0 15px}
+    .about-copy .btn{margin-top:12px}
+    .feature-row{display:flex;gap:25px;flex-wrap:wrap;margin:24px 0 4px}
+    .feature{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700;color:#43575b}
+    .feature-mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e7f3e2;color:var(--green-dark);font-weight:900}
+    /* Services */
+    .services-section{background:#fff}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}
+    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d7e8d0}
+    .service-photo{height:190px;border-radius:0}
+    .service-content{padding:19px 19px 21px}
+    .service-card h3{font:800 16px/1.35 "Manrope",sans-serif;margin:0 0 9px;color:var(--navy)}
+    .service-card p{font-size:12px;color:var(--muted);margin:0}
+    /* Portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .portfolio-photo{height:190px;border-radius:11px}
+    .portfolio-photo:nth-child(4n+2),.portfolio-photo:nth-child(4n+3){height:225px}
+    /* Blog */
+    .blog-section{background:#edf3ee}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .blog-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e4ebe5;transition:.2s}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .blog-photo{height:205px;border-radius:0}
+    .blog-body{padding:20px}
+    .blog-meta{font-size:10px;color:var(--green-dark);font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .blog-body h3{font:800 17px/1.35 "Manrope",sans-serif;color:var(--navy);margin:9px 0}
+    .blog-body p{font-size:12px;color:var(--muted);margin:0 0 15px}
+    .read-more{font-size:12px;font-weight:800;color:var(--green-dark)}
+    .read-more span{font-size:16px;margin-left:4px}
+    /* Partners */
+    .corporate{padding-top:75px;padding-bottom:90px;background:#fff}
+    .corporate-logos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .logo-slot{height:105px;background:#fbfcfb;display:grid;place-items:center;padding:14px;color:#738092;text-align:center;font-size:10px;font-weight:700;border:1px solid var(--line);border-radius:10px}
+    .logo-slot img{max-width:100%;max-height:76px;object-fit:contain}
+    /* Footer */
+    footer{background:#0c2430;color:#c5d2d3;padding:66px 0 24px}
+    .footer-top{display:grid;grid-template-columns:1.45fr .7fr .9fr 1.1fr;gap:42px;padding-bottom:45px}
+    .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:17px}
+    .footer-brand img{width:43px;height:43px;object-fit:contain}
+    .footer-brand strong{font:800 17px "Manrope",sans-serif;color:#fff}
+    .footer-about p{max-width:270px;color:#9fb2b7;font-size:12px;margin:0}
+    .footer-col h3{font:800 12px "Manrope",sans-serif;letter-spacing:1px;color:#fff;margin:5px 0 18px}
+    .footer-links{display:grid;gap:10px}
+    .footer-links a,.footer-col p{font-size:12px;color:#a9bdc0;margin:0}
+    .footer-links a:hover{color:#8bd36b}
+    .social-line{display:flex;align-items:center;gap:9px}
+    .social-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:7px;background:#1b3b46;color:#9bd57e}
+    .map-slot{height:125px;background:#dbe3e8;color:#425469;display:grid;place-items:center;text-align:center;padding:15px;font-size:11px;border-radius:9px}
+    .copyright{border-top:1px solid #25404a;padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:#789096;font-size:10px}
+    /* WhatsApp */
+    .whatsapp-float{position:fixed;right:23px;bottom:23px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c76a;color:#fff;box-shadow:0 8px 25px #061b2b35;transition:.2s}
+    .whatsapp-float:hover{transform:translateY(-4px) scale(1.04);background:#16ae59}
+    .whatsapp-float svg{width:29px;height:29px;fill:currentColor}
+    @media(max-width:980px){
+      .nav-links{gap:15px}.nav-links>a,.blog-toggle{font-size:11px}
+      .hero-grid{gap:35px}.about-grid{gap:40px}
+      .footer-top{grid-template-columns:1.2fr 1fr;gap:32px}
+    }
+    @media(max-width:760px){
+      .site-header{height:70px}.menu-toggle{display:grid;place-items:center}
+      .nav-cta{display:none}
+      .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:15px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #102b3a12;align-items:stretch;gap:0}
+      .nav-links.active{display:flex;flex-direction:column}
+      .nav-links>a,.blog-toggle{display:flex;width:100%;padding:12px 4px;font-size:13px}
+      .blog-menu{width:100%}.blog-toggle{justify-content:space-between}
+      .dropdown{position:static;display:none;width:100%;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:#f5f8f5;margin-bottom:8px}
+      .blog-menu.open .dropdown{display:block}
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .hero-grid{padding:58px 0;gap:35px}.hero-photo{height:280px}
+      .about-grid{gap:28px}.overview-photo{height:300px}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+/* PORTFOLIO - INSTAGRAM FEED 4:5 */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  grid-auto-rows: auto;
+}
+
+.portfolio-grid .portfolio-photo {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-grid .portfolio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+      .blog-grid{grid-template-columns:1fr 1fr}
+      .corporate-logos{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:520px){
+      .wrap{width:calc(100% - 30px)}.section{padding:62px 0}
+      .brand img{width:40px;height:40px}.brand-name{font-size:16px}
+      .hero-grid{padding:48px 0}.hero h1{font-size:42px;letter-spacing:-1.8px}
+      .hero-copy>p{font-size:13px}.hero-photo{height:225px}
+      .about-copy h2{font-size:30px}.overview-photo{height:245px}
+      .section-heading{margin-bottom:30px}.section-heading h2{font-size:29px}
+      .service-grid{gap:12px}.service-photo{height:120px}
+      .service-content{padding:13px}.service-card h3{font-size:13px}.service-card p{font-size:10px}
+      .portfolio-grid{gap:7px}.portfolio-photo,.portfolio-photo:nth-child(4n+2),.portfolio-photo:nth-child(4n+3){height:95px;border-radius:6px}
+      .blog-grid{grid-template-columns:1fr;gap:15px}.blog-photo{height:190px}
+      .corporate{padding:60px 0}.corporate-logos{gap:8px}.logo-slot{height:76px;padding:8px}
+      .footer-top{grid-template-columns:1fr 1fr;gap:28px 18px;padding-bottom:32px}
+      .footer-about{grid-column:span 2}.footer-about p{max-width:100%}
+      .copyright{flex-direction:column;gap:5px}
+      .whatsapp-float{width:53px;height:53px;right:16px;bottom:16px}
+    }
+    .map-slot {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.map-slot iframe {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border: 0;
+}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+
+    <!-- BRAND / LOGO -->
+    <a class="brand" href="#home" aria-label="D.R AQUATIC - Home">
+      <img src="Asset/Public/Hero/logo.png" alt="Logo D.R AQUATIC">
+      <span class="brand-name">D.R AQUATIC</span>
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Our Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <!-- WHATSAPP CTA -->
+    <a class="btn nav-cta"
+       href="https://wa.me/628212229649"
+       target="_blank"
+       rel="noopener">
+      Konsultasi <span>↗</span>
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Buka menu"
+      aria-expanded="false">
+
+      <svg width="21" height="21"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        
+        <h1><em>Kenyamanan</em> Sebuah Ruangan terletak apa yang menjadi <em>Hiasan</em></h1>
+        <p>D.R AQUATIC melayani berbagai kebutuhan project custom aquarium, aquascape, paludarium, terrarium, kolam, dan lainnya.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#about">Jelajahi D.R AQUATIC <span>→</span></a>
+          <a class="btn btn-outline" href="https://wa.me/628212229649" target="_blank" rel="noopener">Konsultasi Project</a>
+        </div>
+      </div>
+      <div class="photo-slot hero-photo">
+        <img src="Asset/Public/Hero/utama.png" alt="Galeri dan project D.R AQUATIC" onerror="this.style.display='none'">
+        <span class="hint">GANTI DENGAN FOTO PROJECT UNGGULAN</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="photo-slot overview-photo">
+        <img src="Asset/Public/Hero/toko.png" alt="Toko dan workshop D.R AQUATIC" onerror="this.style.display='none'">
+        <span class="hint">GANTI DENGAN FOTO TOKO / WORKSHOP</span>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Tentang Kami</span>
+        
+        <p>D.R Aquatic merupakan aquatic store yang berdiri sejak 20 Oktober 2025. bergerak di bidang aquarium dan aquascape.</p>
+        <p>Kami menyajikan pilihan display aquarium dengan berbagai konsep, mulai dari aquascape, paludarium, hingga desain aquarium custom yang dapat disesuaikan dengan kebutuhan dan preferensi Anda.</p>
+        <p>Kami juga menyediakan berbagai perlengkapan dan kebutuhan aquarium, mulai dari ikan hias, tanaman aquatic, hardscape seperti kayu dan batu, substrate, filter, media filter, hingga berbagai peralatan pendukung lainnya. Seluruhnya tersedia untuk memenuhi kebutuhan Anda dalam membangun dan merawat ekosistem aquarium.</p>
+
+        <a class="btn" href="#services">Lihat Layanan Kami <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="wrap">
+      <div class="section-heading"><span class="eyebrow">Apa yang Kami Kerjakan</span><h2>Our Services</h2><p>Ini adalah beberapa layanan kami</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/aquascape.png" alt="Dekorasi aquascape" onerror="this.style.display='none'"><span class="hint">FOTO AQUASCAPE</span></div><div class="service-content"><h3>Aquascape</h3><p>Perancangan dan pembuatan aquascape dengan pilihan konsep serta ukuran sesuai kebutuhan.</p></div></article>
+        
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/paludarium.jpeg" alt="Paludarium dan terrarium"><span class="hint">FOTO PALUDARIUM</span></div><div class="service-content"><h3>Paludarium & Terrarium</h3><p>Landscape darat dan air dengan tampilan natural yang dirancang secara detail.</p></div></article>
+        
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/biotop.png" alt="Biotope aquarium"><span class="hint">FOTO BIOTOP</span></div><div class="service-content"><h3>Biotop Aquarium</h3><p>Ekosistem yang dirancang untuk merepresentasikan habitat alami biota tertentu.</p></div></article>
+       
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/refftank.png" alt="Reef tank"><span class="hint">FOTO REEF TANK</span></div><div class="service-content"><h3>Reef Tank</h3><p>Pembuatan aquarium laut dengan dekorasi dan sistem pendukung biota laut.</p></div></article>
+      
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/kabinet.png" alt="Aquarium custom"><span class="hint">FOTO AQUARIUM CUSTOM</span></div><div class="service-content"><h3>Aquarium & Cabinet Custom</h3><p>Pembuatan aquarium dan kabinet dengan ukuran serta desain sesuai ruang Anda.</p></div></article>
+             
+
+           <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/kolam.png" alt="Pembuatan kolam"><span class="hint">FOTO KOLAM</span></div><div class="service-content"><h3>Pembuatan Kolam</h3><p>Pembuatan kolam indoor maupun outdoor dengan dekorasi dan tanaman pilihan.</p></div></article>
+             
+         <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/moshwall.png" alt="Pembuatan kolam"><span class="hint">FOTO KOLAM</span></div><div class="service-content"><h3>Mosh Wall</h3><p>Pembuatan Mosh wall indoor maupun outdoor dingding anda.</p></div></article>
+                          
+             
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/perlengkapan.png" alt="Perlengkapan aquatic"><span class="hint">FOTO TOKO / PRODUK</span></div><div class="service-content"><h3>Perlengkapan Aquatic</h3><p>Menyediakan berbagai perlengkapan untuk mendukung ekosistem aquarium Anda.</p></div></article>
+        
+        <article class="service-card"><div class="photo-slot service-photo"><img src="Asset/Public/Hero/maintenance.png" alt="Maintenance aquascape"><span class="hint">FOTO MAINTENANCE</span></div><div class="service-content"><h3>Jasa Maintenance </h3><p>Perawatan rutin untuk menjaga kebersihan, kesehatan tanaman, dan keseimbangan ekosistem.</p></div></article>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="section-heading"><span class="eyebrow">Hasil Pengerjaan</span><h2>PORTFOLIO</h2><p>Beberapa project yang telah kami kerjakan</p></div>
+      <div class="portfolio-grid">
+        <div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/1.jpg" alt="Project D.R AQUATIC 1" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 01</span></div>
+        
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/2.jpg" alt="Project D.R AQUATIC 2" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 02</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/3.jpg" alt="Project D.R AQUATIC 3" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 03</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/4.jpg" alt="Project D.R AQUATIC 4" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 04</span></div>
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/5.jpg" alt="Project D.R AQUATIC 5" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 05</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/6.jpg" alt="Project D.R AQUATIC 6" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 06</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/7.jpg" alt="Project D.R AQUATIC 7" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 07</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/8.jpg" alt="Project D.R AQUATIC 8" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 08</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/9.jpg" alt="Project D.R AQUATIC 9" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 09</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/10.jpg" alt="Project D.R AQUATIC 10" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 10</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/11.jpg" alt="Project D.R AQUATIC 11" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 11</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/12.jpg" alt="Project D.R AQUATIC 12" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 12</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/13.jpg" alt="Project D.R AQUATIC 13" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 13</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/14.jpg" alt="Project D.R AQUATIC 14" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 14</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/15.jpg" alt="Project D.R AQUATIC 15" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 15</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/16.jpg" alt="Project D.R AQUATIC 16" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 16</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/17.jpg" alt="Project D.R AQUATIC 17" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 17</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/18.jpg" alt="Project D.R AQUATIC 18" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 18</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/19.jpg" alt="Project D.R AQUATIC 19" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 19</span></div>
+
+<div class="photo-slot portfolio-photo"><img src="Asset/Public/Hero/Portofolio/20.jpg" alt="Project D.R AQUATIC 20" onerror="this.style.display='none'"><span class="hint">FOTO PROJECT 20</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blog-section" id="blog">
+    <div class="wrap">
+      <div class="section-heading"><span class="eyebrow">Blog</span><h2>Explore the Aquatic World</h2><p>Artikel, panduan, dan inspirasi untuk mengenal serta merawat aquascape dan aquarium.</p></div>
+      <div class="blog-grid">
+        <article class="blog-card" id="blog-aquascape">
+          <div class="photo-slot blog-photo"><img src="Asset/Public/Hero/Blog/mengenalaquascape.png" alt="Pemandangan aquascape" onerror="this.style.display='none'"><span class="hint">FOTO AQUASCAPE</span></div>
+          <div class="blog-body"><div class="blog-meta">Aquascape • Panduan Pemula</div><h3>Mengenal Aquascape: Seni Menghadirkan Alam di Dalam Aquarium</h3><p>Kenali apa itu aquascape, elemen yang membentuknya, serta hal yang perlu disiapkan sebelum memulai.</p><a class="read-more" href="mengenal-aquascape.html">Baca Artikel <span>→</span></a></div>
+        </article>
+        <article class="blog-card" id="blog-care">
+          <div class="photo-slot blog-photo"><img src="Asset/Public/Hero/Blog/merawataquascape.png" alt="aquascape" onerror="this.style.display='none'"><span class="hint">FOTO PERAWATAN</span></div>
+          <div class="blog-body"><div class="blog-meta">Perawatan • Tips</div><h3>Cara Merawat Aquascape agar Tetap Bersih dan Sehat</h3><p>Pelajari rutinitas sederhana seperti mengganti air, memangkas tanaman, dan membersihkan kaca.</p><a class="read-more" href="cara-merawat-aquascape.html">Baca Artikel <span>→</span></a></div>
+        </article>
+        <article class="blog-card" id="blog-plants">
+          <div class="photo-slot blog-photo"><img src="Asset/Public/Hero/Blog/pertanyaanaquascaping.png" alt="Tanaman air aquascape" onerror="this.style.display='none'"><span class="hint">FOTO TANAMAN</span></div>
+          <div class="blog-body"><div class="blog-meta">Pertanyaan • Scaper</div><h3>Pertanyaan yang Sering Diajukan (FAQ) tentang Aquascaping</h3><p>Apa saja yang saya butuhkan untuk memulai aquascaping?</p><a class="read-more" href="pertanyaan-scaper.html">Baca Artikel <span>→</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+
+      <!-- ABOUT -->
+      <div class="footer-about">
+        <div class="footer-brand">
+          <img src="Asset/Public/Hero/logo.png" alt="Logo D.R AQUATIC">
+          <strong>D.R AQUATIC</strong>
+        </div>
+        <p>
+         Kenyamanan Sebuah Ruangan terletak apa yang menjadi Hiasan.
+        </p>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="footer-col">
+        <h3>EXPLORE</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Our Projects</a>
+          <a href="#blog">blog</a>
+        </div>
+      </div>
+
+      <!-- MARKETPLACE -->
+      <div class="footer-col">
+        <h3>MARKETPLACE</h3>
+        <div class="footer-links">
+
+          <a class="social-line" href="https://id.shp.ee/Z52fY9br"
+             target="_blank" rel="noopener">
+            <span class="social-icon">S</span> Shopee
+          </a>
+
+          <a class="social-line" href="https://vt.tiktok.com/ZS4y3UJCc/?page=Mall"
+             target="_blank" rel="noopener">
+            <span class="social-icon">T</span> Tokopedia
+          </a>
+
+        </div>
+      </div>
+
+      <!-- GET IN TOUCH -->
+      <div class="footer-col">
+        <h3>GET IN TOUCH</h3>
+        <div class="footer-links">
+
+          <a class="social-line"
+             href="https://www.instagram.com/d.r_aquatic.id/"
+             target="_blank" rel="noopener">
+            <span class="social-icon">◎</span> Instagram
+          </a>
+
+          <a class="social-line"
+             href="https://www.tiktok.com/@d.r_aquatic.id"
+             target="_blank" rel="noopener">
+            <span class="social-icon">♪</span> TikTok
+          </a>
+
+          <a class="social-line"
+             href="https://www.youtube.com/@D.RAQUATIC"
+             target="_blank" rel="noopener">
+            <span class="social-icon">▶</span> YouTube
+          </a>
+
+          <a class="social-line"
+             href="https://www.facebook.com/D.R Aquatic"
+             target="_blank" rel="noopener">
+            <span class="social-icon">f</span> Facebook
+          </a>
+
+          <a class="social-line"
+             href="https://wa.me/628212229649"
+             target="_blank" rel="noopener">
+            <span class="social-icon">✆</span> 0821 2229 649
+          </a>
+
+          <p>
+            Hubungi kami untuk konsultasi project
+            dan informasi layanan.
+          </p>
+
+        </div>
+      </div>
+
+    
+<!-- LOCATION -->
+<div class="footer-col">
+  <h3>FIND OUR LOCATION</h3>
+
+  <div class="map-slot">
+    <a href="https://share.google/erhhrH9s6xwrhwUXg"
+       target="_blank"
+       rel="noopener">
+
+      <iframe
+        src="https://www.google.com/maps?output=embed&q=D.R%20Aquatic"
+        width="100%"
+        height="220"
+        style="border:0; border-radius:12px;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </a>
+  </div>
+
+  <a href="https://share.google/erhhrH9s6xwrhwUXg"
+     target="_blank"
+     rel="noopener"
+     class="social-line">
+    <p>📍 Lihat Lokasi di Google Maps</p>
+  </a>
+</div>
+
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+      <span>
+        © <span id="year"></span> D.R AQUATIC. All rights reserved.
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+
+<a class="whatsapp-float" href="https://wa.me/628212229649?text=Halo%20D.R%20AQUATIC%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Chat D.R AQUATIC melalui WhatsApp" title="Chat WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.8 3.04 15.94c0 2.28.6 4.5 1.75 6.47L3 29l6.78-1.77a13.1 13.1 0 0 0 6.23 1.58h.01C23.17 28.81 29 23 29 15.86A12.8 12.8 0 0 0 16.02 3Zm0 23.6h-.01c-1.9 0-3.76-.51-5.38-1.48l-.39-.23-4.02 1.05 1.07-3.91-.25-.4a10.65 10.65 0 0 1-1.64-5.69c0-5.88 4.8-10.66 10.7-10.66 2.85 0 5.53 1.11 7.54 3.12a10.58 10.58 0 0 1 3.13 7.53c0 5.88-4.8 10.67-10.75 10.67Zm5.87-7.99c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.59-.95-.84-1.59-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.69s1.16 3.12 1.32 3.34c.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.54.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37Z"/></svg>
+</a>
+
+
+<script>
+  // UPDATE COPYRIGHT YEAR
+  const yearElement = document.getElementById('year');
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // MOBILE NAVIGATION
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (menuToggle && navLinks) {
+
+    // OPEN / CLOSE MENU
+    menuToggle.addEventListener('click', () => {
+      const opened = navLinks.classList.toggle('active');
+
+      menuToggle.setAttribute('aria-expanded', String(opened));
+      menuToggle.setAttribute(
+        'aria-label',
+        opened ? 'Tutup menu' : 'Buka menu'
+      );
+    });
+
+    // CLOSE MENU AFTER CLICKING LINK
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Buka menu');
+      });
+    });
+
+    // CLOSE MENU WHEN CLICKING OUTSIDE
+    document.addEventListener('click', event => {
+      if (
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Buka menu');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
